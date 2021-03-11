@@ -1,0 +1,102 @@
+html {
+font-family: 'Oswald', sans-serif;
+}
+
+body {
+background-image: url(https://d3043uog1ad1l6.cloudfront.net/uploads/2020/06/Medicina-do-futuro.jpg);
+background-repeat: no-repeat;
+margin: 0;
+padding: 0;
+}
+
+.nav-link {
+font-size: 24px;
+font-weight: bolder;
+color: rgb(15, 15, 15);
+}
+
+h1 {
+margin-top: 50px;
+font-family: 'Ubuntu', sans-serif;
+padding: 20px 50px 20px 660px;   
+color: rgb(15, 15, 15);
+}
+
+.home {
+margin-top: 50px;
+margin-left: 20px;
+margin-bottom: 50px;
+color: #333;
+}
+
+h3 {
+margin-top: 10px;
+margin-left: 20px;
+color: #333;   
+}
+
+.subtitle h3 {
+margin-top: 100px;
+font-weight: bold;
+}
+
+form {
+font-size: 20px;
+color: #000;
+max-width: 500px;
+margin: 0 auto;
+padding: 0 10px 10px 10px;
+}
+
+input {
+width: 474px;
+padding: 10px;
+}
+
+.botao input {
+background-color: rgb(68, 149, 224);
+height: 60px;
+width: 150px;
+font-weight: bold;
+border-radius: 5px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border: 1px solid;
+color: #FFF;
+cursor: pointer;
+}
+
+.botao input:hover {
+background: rgb(0, 131, 136);
+}
+
+.tabela {    
+background: #F8F8FF;
+margin-left: 500px;
+margin-top: 50px;
+}
+
+.option input {
+display:inline-block;
+width: 19px;
+height: 19px;
+margin: -2px 5px 0px 0;
+vertical-align: middle;
+background: url(check_radio_sheet.png) left top no-repeat;
+cursor: pointer;
+}
+
+.titlesobre {
+margin-top: 50px;
+color: black;
+font-weight: bold;
+text-align: center;
+padding-bottom: 50px;
+}
+
+.letrasobre {
+text-shadow: rgb(252, 249, 249) 0.1em 0.1em 0.2em;
+color:  black;
+font-size: 24px;
+text-align: justify; 
+}
