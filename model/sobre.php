@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
         <link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="./styled.css">
-        <link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/styled.css">
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap/css/bootstrap.min.css">
         <title>Sobre Nós</title>
     </head>
     <body> 
@@ -12,7 +12,7 @@
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php">Ir para Home</a>
+                        <a class="nav-link" href="../index.php">Ir para Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="pesquisa.php">Faça a Pesquisa</a>
@@ -31,7 +31,7 @@
                             <p>Esse site foi desenvolvido pelos alunos<br/>                                                    
                             Felipe Padilha, <br/> Fernando Augusto, <br/> Jean Maciel, <br/>
                             Somos alunos da: Universidade de Caxias do Sul - UCS <br/>
-                            Orientados pela professora Elisa Boff
+                            Orientados pela professora: Gabriele Dani Bonetti
                         </p>                        
                         </ul>
                     </div>
