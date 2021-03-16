@@ -5,10 +5,22 @@ include_once "../bd/conexao.php";
 <html lang="pt-br">
     <head>
         <meta charset="utf-8">
-        <link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="../css/styled.css">
         <link rel="stylesheet" type="text/css" href="../css/bootstrap/css/bootstrap.min.css">
         
+        <script type="text/javascript">
+        function formatar_mascara(src, mascara) {
+        var campo = src.value.length;
+        var saida = mascara.substring(0,1);
+        var texto = mascara.substring(campo);
+        if(texto.substring(0,1) != saida) {
+        src.value += texto.substring(0,1);
+        }
+        }
+        </script>
+
         <title>Página de Consultas</title>
     </head>
     <body>
@@ -28,9 +40,11 @@ include_once "../bd/conexao.php";
             </div>
         </nav>
         <h1>Consulta de pacientes</h1>
-        <form method="POST" action="consulta.php">
-            <label>Nome: </label>
-            <input type="text" name="nome" placeholder="Digite o nome completo:"><br><br>
+        <form class="pesquisa" method="POST" action="consulta.php">
+            <div class="area1">
+            <label>CPF:</label>
+            <input type="text" name="cpf" placeholder="Ex.: 000.000.000-00" maxlength="14" size="40" onkeypress="formatar_mascara(this,'###.###.###-##')"><br><br>               
+            </div>
             <p class="botao">
             <input name="sendPesqUser" type="submit" value="Consultar">
             </p>

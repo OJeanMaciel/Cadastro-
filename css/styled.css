@@ -1,5 +1,5 @@
 html {
-font-family: 'Oswald', sans-serif;
+font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -10,13 +10,12 @@ padding: 0;
 }
 
 .nav-link {
-font-size: 24px;
+font-size: 20px;
 font-weight: bolder;
 color: rgb(15, 15, 15);
 }
 
 .home {
-font-size: 35px;
 margin-top: 50px;
 margin-left: 20px;
 margin-bottom: 50px;
@@ -26,7 +25,7 @@ color: rgb(0, 0, 0);
 h1 {
 margin-top: 50px;
 font-family: 'Ubuntu', sans-serif;
-padding: 20px 50px 20px 660px;   
+padding: 20px 50px 20px 450px;   
 color: rgb(15, 15, 15);
 }
 
@@ -41,12 +40,44 @@ margin-top: 100px;
 font-weight: bold;
 }
 
-form {
+div.container {
+height: 100%;
+}
+
+div.area1 {
+width: 38%;
+display: inline-block;
+font-size: 15px;
+color: #000;
+}
+
+div.area2 {
+width: 38%;
+display: inline-block;
+font-size: 15px;
+color: #000;
+margin-left: 150px;
+}
+
+.pesquisa {
 font-size: 20px;
 color: #000;
-max-width: 500px;
-margin: 0 auto;
+margin-left: 450px;
 padding: 0 10px 10px 10px;
+}
+
+input[type="radio"] {
+display:inline-block;
+width:19px;
+height:19px;
+margin: -2px 10px 0 0;
+vertical-align:middle;
+cursor:pointer;
+}
+
+.btnradio {
+text-shadow: rgb(252, 249, 249) 0.1em 0.1em 0.2em;
+color:  black;
 }
 
 input {
@@ -73,22 +104,13 @@ background: rgb(0, 131, 136);
 
 .tabela {    
 background: #F8F8FF;
-margin-left: 500px;
+margin-left: 150px;
 margin-top: 50px;
-}
-
-.option input {
-display:inline-block;
-width: 19px;
-height: 19px;
-margin: -2px 5px 0px 0;
-vertical-align: middle;
-background: url(check_radio_sheet.png) left top no-repeat;
-cursor: pointer;
 }
 
 .titlesobre {
 margin-top: 50px;
+text-shadow: rgb(252, 249, 249) 0.1em 0.1em 0.2em;
 color: black;
 font-weight: bold;
 text-align: center;
@@ -98,6 +120,6 @@ padding-bottom: 50px;
 .letrasobre {
 text-shadow: rgb(252, 249, 249) 0.1em 0.1em 0.2em;
 color:  black;
-font-size: 24px;
+font-size: 20px;
 text-align: justify; 
 }

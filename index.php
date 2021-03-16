@@ -2,7 +2,8 @@
 <html lang="pt-br">
     <head>
         <title>Home - Page</title>
-        <link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./css/styled.css">
         <link rel="stylesheet" type="text/css" href="./css/bootstrap/css/bootstrap.min.css">
     </head>
@@ -18,7 +19,7 @@
                     </li>
             </div>
             <div >                
-                <a class="nav-link" href="sobre.php">Sobre Nós</a>                
+                <a class="nav-link" href="./model/sobre.php">Sobre Nós</a>                
             </div>
         </nav>
         

@@ -6,7 +6,8 @@ include_once "../bd/conexao.php";
     <head>
         <meta charset="utf-8">
         <title>Página de Consultas</title>
-        <link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="../css/styled.css">
         <link rel="stylesheet" type="text/css" href="../css/bootstrap/css/bootstrap.min.css">
     </head>
@@ -26,7 +27,7 @@ include_once "../bd/conexao.php";
                 <a class="nav-link" href="sobre.php">Sobre Nós</a>                
             </div>
         </nav>
-            <table class="tabela" border="1" style='width:50%'>
+            <table class="tabela" border="1" style='width:80%'>
             <tr>
             <th>CPF</th>
             <th>Nome</th>
@@ -34,13 +35,14 @@ include_once "../bd/conexao.php";
             <th>Email</th>
             <th>Consulta</th>
             <th>Horario</th>
+            <th>Medico</th>
             <th>Sintoma</th>
             </tr>
         <?php     
             $sendPesqUser = filter_input(INPUT_POST, 'sendPesqUser', FILTER_SANITIZE_STRING);
             if ($sendPesqUser) {
-                $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING);
-                $result_cadastro = "SELECT * FROM cadastro WHERE nome LIKE '%$nome%'";
+                $cpf = filter_input(INPUT_POST, 'cpf', FILTER_SANITIZE_STRING);
+                $result_cadastro = "SELECT * FROM cadastro where cpf = '$cpf'";
                 $resultado_cadastro = mysqli_query($conn, $result_cadastro);
 
                 while($row_usuario = mysqli_fetch_assoc($resultado_cadastro)) {
@@ -48,8 +50,9 @@ include_once "../bd/conexao.php";
                     $nome =  $row_usuario['nome'];
                     $idade = $row_usuario['idade'];
                     $email = $row_usuario['email'];
-                    $consulta =  $row_usuario['data'];
+                    $consulta =  $row_usuario['consulta'];
                     $horario =  $row_usuario['horario'];
+                    $medico =  $row_usuario['medico'];
                     $sintoma =  $row_usuario['sintoma'];
                     echo "<tr>";
                     echo "<td>".$cpf."</td>";
@@ -58,6 +61,7 @@ include_once "../bd/conexao.php";
                     echo "<td>".$email."</td>";
                     echo "<td>".$consulta."</td>";
                     echo "<td>".$horario."</td>";
+                    echo "<td>".$medico."</td>";
                     echo "<td>".$sintoma."</td>";
                     echo "</tr>";
                 }                
