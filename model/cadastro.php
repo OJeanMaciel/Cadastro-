@@ -59,18 +59,19 @@ session_start();
                     <label>CPF:</label>
                     <input type="cpf" name="cpf" placeholder="Ex.: 000.000.000-00" maxlength="14" size="40" onkeypress="formatar_mascara(this,'###.###.###-##')" ><br><br>
 
-                    <label>E-mail:</label>
-                    <input type="email" name="email" placeholder="Digite seu Email"><br><br>                
+                    <label>Telefone:</label>
+                    <input type="int" name="telefone" placeholder="Ex:. (00) 0000-00000"><br><br>
+              
                 </div>
 
                 <div class="area2">
                         
                         <label>Consulta:</label>
-                        <input type="date" name="consulta" placeholder="Digite o dia para sua consulta"><br><br>
+                        <input type="date" name="consulta" placeholder="Ex:.2021/03/18 14:00" maxlength="10" size="40" onkeypress="formatar_mascara(this,'####/##/##')"><br><br>
 
                         <label>Hora:</label>
-                        <input type="text" name="horario" placeholder="Ex.: 00:00"><br><br>
-                        
+                        <input type="text" name="hora" placeholder="Ex:.14:00" maxlength="5" size="40" onkeypress="formatar_mascara(this,'##:##')"><br><br>
+
                         <label>Sintoma:</label>
                         <input type="text" name="sintoma" placeholder="Descreva os sintomas!"><br><br><br><br>
                         
@@ -80,8 +81,8 @@ session_start();
                         <label class="btnradio">
                             <input type="radio" name="medico" value="Dra.Fernanda">Dra.Fernanda
                         </label>
-                        <labe class="btnradio"l>
-                            <input type="radio" name="medico" value="Dra.Fernando">Dra.Isabela
+                        <labe class="btnradio">
+                            <input type="radio" name="medico" value="Dra.Isabela">Dra.Isabela
                         </label>
                         <label class="btnradio">
                             <input type="radio" name="medico" value="Dra.Manuela">Dra.Manuela

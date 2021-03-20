@@ -40,7 +40,7 @@ include_once "../bd/conexao.php";
             </div>
         </nav>
         <h1>Consulta de pacientes</h1>
-        <form class="pesquisa" method="POST" action="consulta.php">
+        <form class="pesquisa" method="POST" action="../controller/consulta.php">
             <div class="area1">
             <label>CPF:</label>
             <input type="text" name="cpf" placeholder="Ex.: 000.000.000-00" maxlength="14" size="40" onkeypress="formatar_mascara(this,'###.###.###-##')"><br><br>               

@@ -19,12 +19,12 @@ include_once "../bd/conexao.php";
                         <a class="nav-link" href="../index.php">Ir para Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="cadastro.php">Faça o Cadastro</a>
+                        <a class="nav-link" href="../model/cadastro.php">Faça o Cadastro</a>
                     </li>
                 </ul>
             </div>
             <div >                
-                <a class="nav-link" href="sobre.php">Sobre Nós</a>                
+                <a class="nav-link" href="../model/sobre.php">Sobre Nós</a>                
             </div>
         </nav>
             <table class="tabela" border="1" style='width:80%'>
@@ -32,10 +32,10 @@ include_once "../bd/conexao.php";
             <th>CPF</th>
             <th>Nome</th>
             <th>Idade</th>
-            <th>Email</th>
-            <th>Consulta</th>
-            <th>Horario</th>
             <th>Medico</th>
+            <th>Consulta</th>
+            <th>Hora</th>
+            <th>Telefone</th>
             <th>Sintoma</th>
             </tr>
         <?php     
@@ -49,19 +49,19 @@ include_once "../bd/conexao.php";
                     $cpf =  $row_usuario['cpf'];
                     $nome =  $row_usuario['nome'];
                     $idade = $row_usuario['idade'];
-                    $email = $row_usuario['email'];
-                    $consulta =  $row_usuario['consulta'];
-                    $horario =  $row_usuario['horario'];
                     $medico =  $row_usuario['medico'];
+                    $telefone =  $row_usuario['telefone'];
+                    $consulta =  $row_usuario['consulta'];
+                    $hora =  $row_usuario['hora'];
                     $sintoma =  $row_usuario['sintoma'];
                     echo "<tr>";
                     echo "<td>".$cpf."</td>";
                     echo "<td>".$nome."</td>";
                     echo "<td>".$idade."</td>";
-                    echo "<td>".$email."</td>";
-                    echo "<td>".$consulta."</td>";
-                    echo "<td>".$horario."</td>";
                     echo "<td>".$medico."</td>";
+                    echo "<td>".$consulta."</td>";
+                    echo "<td>".$hora."</td>";
+                    echo "<td>".$telefone."</td>";
                     echo "<td>".$sintoma."</td>";
                     echo "</tr>";
                 }                
