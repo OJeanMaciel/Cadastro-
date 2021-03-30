@@ -51,7 +51,7 @@
                     <div class="row">
                         <ul class="letrasobre">                        
                             <p>O Site tem como base o projeto integrador V. E foi desenvolvido para marcar consultas para pessoas com sintomas de Covid-19.
-                            Assim agilizando no processo de atendimento, e dando um suporte melhor para os pacientes!                                                      
+                            Assim agilizando o processo de atendimento, e dando um suporte melhor para os pacientes!                                                      
                             </p>
                             
                     </div>

@@ -1,5 +1,6 @@
 <?php 
-include_once "../bd/conexao.php";
+session_start();
+include_once("../bd/conexao.php");
 ?>
 <!Doctype html>
 <html lang="pt-br">
@@ -36,7 +37,8 @@ include_once "../bd/conexao.php";
             <th>Consulta</th>
             <th>Hora</th>
             <th>Telefone</th>
-            <th>Sintoma</th>
+            <th>Sintomas</th>
+            <th>Excluir</th>
             </tr>
         <?php     
             $sendPesqUser = filter_input(INPUT_POST, 'sendPesqUser', FILTER_SANITIZE_STRING);
@@ -63,6 +65,7 @@ include_once "../bd/conexao.php";
                     echo "<td>".$hora."</td>";
                     echo "<td>".$telefone."</td>";
                     echo "<td>".$sintoma."</td>";
+                    echo "<td><a href='delete.php?Id=".$row_usuario['Id']."'>Excluir</a></td>";
                     echo "</tr>";
                 }                
             }   

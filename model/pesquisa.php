@@ -1,5 +1,6 @@
 <?php 
-include_once "../bd/conexao.php";
+session_start();
+include_once("../bd/conexao.php");
 ?>
 <!Doctype html>
 <html lang="pt-br">
@@ -40,6 +41,13 @@ include_once "../bd/conexao.php";
             </div>
         </nav>
         <h1>Consulta de pacientes</h1>
+        <?php 
+            if(isset($_SESSION['msg'])) {
+                echo $_SESSION['msg'];
+                unset($_SESSION['msg']);
+            }
+            
+        ?>
         <form class="pesquisa" method="POST" action="../controller/consulta.php">
             <div class="area1">
             <label>CPF:</label>
@@ -47,7 +55,7 @@ include_once "../bd/conexao.php";
             </div>
             <p class="botao">
             <input name="sendPesqUser" type="submit" value="Consultar">
-            </p>
+            </p> 
         </form><br><br>
     </body>
 
