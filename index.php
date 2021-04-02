@@ -1,7 +1,9 @@
 <!Doctype html>
 <html lang="pt-br">
     <head>
-        <title>Home - Page</title>
+        <title>
+        Home - Page
+        </title>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./css/styled.css">

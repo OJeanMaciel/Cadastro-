@@ -1,4 +1,5 @@
 <?php 
+include_once('../bd/conexao.php');
 session_start();
 ?>
 <!Doctype html>
@@ -32,6 +33,9 @@ session_start();
                     <li class="nav-item">
                         <a class="nav-link" href="pesquisa.php">Faça a Pesquisa</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cadmedico.php">Cadastrar médico</a>
+                    </li>
                 </ul>
             </div>
             <div >                
@@ -60,7 +64,7 @@ session_start();
                     <input type="cpf" name="cpf" placeholder="Ex.: 000.000.000-00" maxlength="14" size="40" onkeypress="formatar_mascara(this,'###.###.###-##')" ><br><br>
 
                     <label>Telefone:</label>
-                    <input type="int" name="telefone" placeholder="Ex:. (00) 0000-00000"><br><br>
+                    <input type="int" name="telefone" placeholder="Ex:. (00) 0000-00000"><br><br><br>
               
                 </div>
 
@@ -73,31 +77,25 @@ session_start();
                         <input type="text" name="hora" placeholder="Ex:.14:00" maxlength="5" size="40" onkeypress="formatar_mascara(this,'##:##')"><br><br>
 
                         <label>Sintoma:</label>
-                        <input type="text" name="sintoma" placeholder="Descreva os sintomas!"><br><br><br><br>
+                        <input type="text" name="sintoma" placeholder="Descreva os sintomas!"><br><br><br>
                         
-                        <label class="btnradio">
-                            <input type="radio" name="medico" value="Dr.Fernando">Dr.Fernando
-                        </label>
-                        <label class="btnradio">
-                            <input type="radio" name="medico" value="Dra.Fernanda">Dra.Fernanda
-                        </label>
-                        <labe class="btnradio">
-                            <input type="radio" name="medico" value="Dra.Isabela">Dra.Isabela
-                        </label>
-                        <label class="btnradio">
-                            <input type="radio" name="medico" value="Dra.Manuela">Dra.Manuela
-                        </label>
-                        <label class="btnradio">
-                            <input type="radio" name="medico" value="Dr.Rodrigues">Dr.Rodrigues
-                        </label>
-                        <label class="btnradio">
-                            <input type="radio" name="medico" value="Dr.Mariana">Dra.Mariana
-                        </label>
-                        
+                        <label>Médicos: </label><br>
+                            <select class="select" name="medico">
+                                <option>Selecione</option>
+                                <?php
+                                $result_medico = "SELECT * FROM `medico`";
+                                $resultado_medico = mysqli_query($conn, $result_medico);
+                                while($row_medico = mysqli_fetch_assoc($resultado_medico)){ ?>
+                                <option value="<?php echo $row_medico['nome']; ?>"><?php echo $row_medico['nome']; ?>
+                                </option> <?php
+                                }
+                            ?>
+                             </select><br><br><br>
                 </div>
                 <p class="botao">
                     <input type="submit" value="Cadastrar">
                 </p>
+                
             </form>     
         </div>
     </body>

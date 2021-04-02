@@ -13,14 +13,17 @@ $telefone = filter_input(INPUT_POST, 'telefone', FILTER_SANITIZE_STRING);
 $sintoma = filter_input(INPUT_POST, 'sintoma', FILTER_SANITIZE_STRING);
 
 
-$result_cadastro = "INSERT INTO cadastro (cpf, nome, idade, medico, consulta, hora, telefone, sintoma) VALUES ('$cpf', '$nome', '$idade', '$medico', '$consulta', '$hora', '$telefone', '$sintoma')";
-$result_usuario = mysqli_query($conn, $result_cadastro);
-
-if (mysqli_insert_id ($conn)) {
+    $result_cadastro = "INSERT INTO cadastro (cpf, nome, idade, medico) VALUES ('$cpf', '$nome', '$idade', '$medico')";
+    $result_usuario = mysqli_query($conn, $result_cadastro);
+    
+    $result_consulta = "INSERT INTO consulta (consulta, hora, telefone, sintoma, cpf_id) VALUES ('$consulta', '$hora', '$telefone', '$sintoma', '$cpf')";
+    $result_usuarios = mysqli_query($conn, $result_consulta);
+    
+    if (mysqli_insert_id ($conn)) {
     $_SESSION['msg'] = "<p style='color:green'> Consulta cadastrada com Sucesso! </p>";
-    header("Location: ../model/cadastro.php");
-}else {
-    $_SESSION['msg'] = "<p style='color:red'> Consulta não cadastrada! </p>";
-    header("Location: ../model/cadastro.php");
-}
+        header("Location: ../model/cadastro.php");
+    }else {
+        $_SESSION['msg'] = "<p style='color:red'> Consulta não cadastrada! </p>";
+        header("Location: ../model/cadastro.php");
+    }
 ?>

@@ -33,42 +33,25 @@ include_once("../bd/conexao.php");
         </nav>
             <table class="tabela" border="1" style='width:80%'>
             <tr>
-            <th>CPF</th>
+            <th>CRM</th>
             <th>Nome</th>
-            <th>Idade</th>
-            <th>Medico</th>
-            <th>Consulta</th>
-            <th>Hora</th>
-            <th>Telefone</th>
-            <th>Sintomas</th>
-            <th>Excluir</th>
+            <th>Especialidade</th>
             </tr>
         <?php     
             $sendPesqUser = filter_input(INPUT_POST, 'sendPesqUser', FILTER_SANITIZE_STRING);
             if ($sendPesqUser) {
-                $cpf = filter_input(INPUT_POST, 'cpf', FILTER_SANITIZE_STRING);
-                $result_cadastro = "SELECT * FROM cadastro as A INNER JOIN consulta as B where cpf = '$cpf' and cpf_id = '$cpf'";
-                $resultado_cadastro = mysqli_query($conn, $result_cadastro);
+                $especialidade = filter_input(INPUT_POST, 'especialidade', FILTER_SANITIZE_STRING);
+                $result_med = "SELECT * FROM medico WHERE especialidade LIKE '%$especialidade%'";
+                $resultado_med = mysqli_query($conn, $result_med);
 
-                while($row_usuario = mysqli_fetch_assoc($resultado_cadastro)) {
-                    $cpf =  $row_usuario['cpf'];
+                while($row_usuario = mysqli_fetch_assoc($resultado_med)) {
+                    $crm =  $row_usuario['crm'];
                     $nome =  $row_usuario['nome'];
-                    $idade = $row_usuario['idade'];
-                    $medico =  $row_usuario['medico'];
-                    $telefone =  $row_usuario['telefone'];
-                    $consulta =  $row_usuario['consulta'];
-                    $hora =  $row_usuario['hora'];
-                    $sintoma =  $row_usuario['sintoma'];
+                    $especialidade = $row_usuario['especialidade'];
                     echo "<tr>";
-                    echo "<td>".$cpf."</td>";
+                    echo "<td>".$crm."</td>";
                     echo "<td>".$nome."</td>";
-                    echo "<td>".$idade."</td>";
-                    echo "<td>".$medico."</td>";
-                    echo "<td>".$consulta."</td>";
-                    echo "<td>".$hora."</td>";
-                    echo "<td>".$telefone."</td>";
-                    echo "<td>".$sintoma."</td>";
-                    echo "<td><a href='delete.php?Id=".$row_usuario['Id']."'>Excluir</a></td>";
+                    echo "<td>".$especialidade."</td>";
                     echo "</tr>";
                 }                
             }   
