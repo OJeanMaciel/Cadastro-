@@ -2,7 +2,7 @@
 <html lang="pt-br">
     <head>
         <title>
-        Home - Page
+        Boa Consulta
         </title>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
@@ -13,6 +13,9 @@
         <nav class="navbar navbar-expand-lg navbar-ligth" style="background-color: #00BFFF">
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./model/agenda.php">Agenda</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./model/cadastro.php">Faça o Cadastro</a>
                     </li>

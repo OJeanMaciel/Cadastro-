@@ -16,6 +16,9 @@
                         <a class="nav-link" href="../index.php">Ir para Home</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="agenda.php">Agenda</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="./cadastro.php">Faça o Cadastro</a>
                     </li>
                     <li class="nav-item">

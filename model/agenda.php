@@ -32,9 +32,6 @@ include_once("../bd/conexao.php");
                         <a class="nav-link" href="../index.php">Ir para Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="agenda.php">Agenda</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="cadastro.php">Faça o Cadastro</a>
                     </li>
                 </ul>
@@ -43,32 +40,17 @@ include_once("../bd/conexao.php");
                 <a class="nav-link" href="sobre.php">Sobre Nós</a>                
             </div>
         </nav>
-        <h1>Consulta de pacientes</h1>
-        <?php 
-            if(isset($_SESSION['msg'])) {
-                echo $_SESSION['msg'];
-                unset($_SESSION['msg']);
-            }
-            
-        ?>
-        <form class="pesquisa" method="POST" action="../controller/consulta.php">
+        <h1>Consultas:</h1>     
+
+        <form class="pesquisa" method="POST" action="../controller/consultaagen.php">
             <div class="area1">
-            <label>CPF:</label>
-            <input type="text" name="cpf" placeholder="Ex.: 000.000.000-00" maxlength="14" size="40" onkeypress="formatar_mascara(this,'###.###.###-##')"><br><br>               
+            <label>Consultas agendadas:</label>
+            <input type="date" name="consulta"><br><br>               
             </div>
             <p class="botao">
             <input name="sendPesqUser" type="submit" value="Consultar">
             </p> 
         </form>
-        <h1>Médicos cadastrados</h1>
-        <form class="pesquisa" method="POST" action="../controller/consultamed.php">
-            <div class="area1">
-            <label>Especialidade:</label>
-            <input type="text" name="especialidade" placeholder="Digite a especialidade do médico!"><br><br>               
-            </div>
-            <p class="botao">
-            <input name="sendPesqUser" type="submit" value="Consultar">
-            </p> 
         </form>
     </body>
 

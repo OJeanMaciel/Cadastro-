@@ -31,6 +31,9 @@ session_start();
                         <a class="nav-link" href="../index.php">Ir para Home</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="agenda.php">Agenda</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="pesquisa.php">Faça a Pesquisa</a>
                     </li>
                     <li class="nav-item">
@@ -64,7 +67,7 @@ session_start();
                     <input type="cpf" name="cpf" placeholder="Ex.: 000.000.000-00" maxlength="14" size="40" onkeypress="formatar_mascara(this,'###.###.###-##')" ><br><br>
 
                     <label>Telefone:</label>
-                    <input type="int" name="telefone" placeholder="Ex:. (00) 0000-00000"><br><br><br>
+                    <input type="int" name="telefone" placeholder="Ex:. (00) 0000-00000" maxlength="13"><br><br><br>
               
                 </div>
 

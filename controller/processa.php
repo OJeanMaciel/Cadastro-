@@ -13,10 +13,10 @@ $telefone = filter_input(INPUT_POST, 'telefone', FILTER_SANITIZE_STRING);
 $sintoma = filter_input(INPUT_POST, 'sintoma', FILTER_SANITIZE_STRING);
 
 
-    $result_cadastro = "INSERT INTO cadastro (cpf, nome, idade, medico) VALUES ('$cpf', '$nome', '$idade', '$medico')";
+    $result_cadastro = "INSERT INTO cadastro (cpf, nome, idade, consulta_cad) VALUES ('$cpf', '$nome', '$idade', '$consulta')";
     $result_usuario = mysqli_query($conn, $result_cadastro);
     
-    $result_consulta = "INSERT INTO consulta (consulta, hora, telefone, sintoma, cpf_id) VALUES ('$consulta', '$hora', '$telefone', '$sintoma', '$cpf')";
+    $result_consulta = "INSERT INTO consulta (consulta, hora, telefone, sintoma, cpf_id, crm_id) VALUES ('$consulta', '$hora', '$telefone', '$sintoma', '$cpf', '$medico')";
     $result_usuarios = mysqli_query($conn, $result_consulta);
     
     if (mysqli_insert_id ($conn)) {
