@@ -31,11 +31,11 @@ include_once("../bd/conexao.php");
                 <a class="nav-link" href="../model/sobre.php">Sobre Nós</a>                
             </div>
         </nav>
-            <table class="tabela" border="1" style='width:80%'>
+            <table class="tabela" border="1" style='width: 85%'>
             <tr>
             <th>CPF</th>
             <th>Nome</th>
-            <th>Idade</th>
+            <th>Data Nascimento</th>
             <th>Medico</th>
             <th>Consulta</th>
             <th>Hora</th>
@@ -53,7 +53,7 @@ include_once("../bd/conexao.php");
                 while($row_usuario = mysqli_fetch_assoc($resultado_cadastro)) {
                     $cpf =  $row_usuario['cpf'];
                     $nome =  $row_usuario['nome'];
-                    $idade = $row_usuario['idade'];
+                    $data_nascimento = $row_usuario['data_nascimento'];
                     $medico =  $row_usuario['crm_id'];
                     $telefone =  $row_usuario['telefone'];
                     $consulta =  $row_usuario['consulta'];
@@ -62,7 +62,7 @@ include_once("../bd/conexao.php");
                     echo "<tr>";
                     echo "<td>".$cpf."</td>";
                     echo "<td>".$nome."</td>";
-                    echo "<td>".$idade."</td>";
+                    echo "<td>".$data_nascimento."</td>";
                     echo "<td>".$medico."</td>";
                     echo "<td>".$consulta."</td>";
                     echo "<td>".$hora."</td>";

@@ -43,15 +43,16 @@ include_once("../bd/conexao.php");
             $sendPesqUser = filter_input(INPUT_POST, 'sendPesqUser', FILTER_SANITIZE_STRING);
             if ($sendPesqUser) {
                 $consulta = filter_input(INPUT_POST, 'consulta', FILTER_SANITIZE_STRING);
-                $result_agenda = "SELECT * FROM consulta as A INNER JOIN cadastro as B WHERE consulta = '$consulta' AND consulta_cad = '$consulta' ORDER BY hora";
+                $result_agenda = "SELECT  A.consulta, A.telefone,B.crm_con,B.nome,B.hora_con FROM consulta as A 
+                INNER JOIN cadastro as B on A.cpf_id = B.cpf WHERE A.consulta = '$consulta' AND B.consulta_cad = '$consulta' ORDER BY B.hora_con ";
                 $resultado_agenda = mysqli_query($conn, $result_agenda);
 
                 while($row_usuario = mysqli_fetch_assoc($resultado_agenda)) {
                     $consulta =  $row_usuario['consulta'];
-                    $hora =  $row_usuario['hora'];
+                    $hora =  $row_usuario['hora_con'];
                     $telefone =  $row_usuario['telefone'];
                     $nome =  $row_usuario['nome'];
-                    $medico = $row_usuario['crm_id'];
+                    $medico = $row_usuario['crm_con'];
                     echo "<tr>";
                     echo "<td>".$nome."</td>";
                     echo "<td>".$medico."</td>";

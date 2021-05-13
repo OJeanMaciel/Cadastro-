@@ -34,6 +34,9 @@ include_once("../bd/conexao.php");
                     <li class="nav-item">
                         <a class="nav-link" href="cadastro.php">Faça o Cadastro</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./teste.php">Faça o Teste</a>
+                    </li>
                 </ul>
             </div>
             <div >                

@@ -22,6 +22,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="./model/pesquisa.php">Faça a Pesquisa</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./model/teste.php">Faça o teste</a>
+                    </li>
             </div>
             <div >                
                 <a class="nav-link" href="./model/sobre.php">Sobre Nós</a>                

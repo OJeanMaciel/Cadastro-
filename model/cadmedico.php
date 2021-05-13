@@ -20,6 +20,16 @@ session_start();
         }
         }
         </script>
+        <script>
+        function somenteLetras(string) {
+        var er = /[^a-z-./]/;
+        er.lastIndex = 0;
+        var campo = string;
+        if (er.test(campo.value)) {
+        campo.value = "";
+        }
+        }
+        </script>        
         <title>Cadastro de Médicos</title>
     </head>
     <body> 
@@ -34,6 +44,9 @@ session_start();
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="pesquisa.php">Faça a Pesquisa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./teste.php">Faça o Teste</a>
                     </li>
                 </ul>
             </div>
@@ -60,7 +73,7 @@ session_start();
                     <input type="text" name="crm" placeholder="EX:. 00000000-0/BR" maxlength="13" size="40" onkeypress="formatar_mascara(this,'########-#/##')"><br><br>
         
                     <label>Especialidade:</label>
-                    <input type="text" name="especialidade" placeholder="Descreva a especialidade"><br><br>
+                    <input type="text" name="especialidade" placeholder="Descreva a especialidade" onkeyup="somenteLetras(this);"><br><br>
                     
                 </div>
                 <p class="botao">
